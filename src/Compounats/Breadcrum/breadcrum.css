@@ -1,0 +1,42 @@
+.breadcrum {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    margin: 16px 0;
+  }
+  
+  .breadcrum ol {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .breadcrum li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrum li a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .breadcrum li a:hover {
+    text-decoration: underline;
+  }
+  
+  .breadcrum li img {
+    margin: 0 8px;
+  }
+  
+  .breadcrum li:last-child {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .breadcrum li:last-child img {
+    display: none;
+  }
+  
