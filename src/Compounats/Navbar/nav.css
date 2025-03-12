@@ -92,4 +92,48 @@
     .navbar{
         padding: 12px 50px;
     }
+    .nav-logo img{
+        width: 40px;
+    }
+    .nav-logo p{
+        font-size: 25px;
+    }
+    .nav-menu{
+        gap: 30px;
+        font-size: 16px;
+    }
+    .nav-login-cart button{
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .nav-cart-count{
+        margin-left: -55px;
+        font-size: 12px;
+    }
+}
+@media(max-width:1024px){
+    .navbar{
+        padding: 12px 30px;
+    }
+    .nav-menu{
+        gap: 25px;
+        font-size: 14px;
+    }
+    .nav-login-cart button{
+        width: 77px;
+        height: 28px;
+        font-size: 14px;
+        margin-top: 13px;
+    }
+    .nav-cart-count{
+        width: 18px;
+        height: 18px;
+        margin-top: 8px;
+
+    }
+    .nav-login-cart img{
+      width: 30px; 
+      margin-top: 14px; 
+    }
 }
