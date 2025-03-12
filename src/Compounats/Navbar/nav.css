@@ -137,3 +137,26 @@
       margin-top: 14px; 
     }
 }
+.nav-dropdown{
+    display: none;
+}
+@media(max-width:800px){
+.navbar{
+    padding: 10px 0px;
+}
+.nav-dropdown{
+    display: block;
+    width: 30px;
+    /* rotate: 360deg; */
+    transition: 0.5s;
+}
+.nav-menu{
+    display: none;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    justify-content: center;
+    top: 50px;
+}
+}

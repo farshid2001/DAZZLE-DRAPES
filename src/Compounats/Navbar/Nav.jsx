@@ -1,12 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./nav.css";
 import logo from "../Assets/logo.png";
 import cart_icon from "../Assets/cart_icon.png";
 import { Link, NavLink } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
+import nav_dropdown from "../Assets/menu.png"
 
 const Navbar = () => {
-const {getCartTotalItems} = useContext(ShopContext)
+
+  const [menu, setMenu] = useState('shop')
+  const { getCartTotalItems } = useContext(ShopContext)
+
+  const menuRef = useRef();
+
+  const dropdwon_toggle = (e) => {
+    menuRef.current.classList.toggle('nav-menu-visible');
+    e.target.classList.toggle('open')
+  }
+
 
   return (
     <div className="navbar">
@@ -14,13 +25,15 @@ const {getCartTotalItems} = useContext(ShopContext)
         <img className="logo-img" src={logo} alt="logo" />
         <p>DAZZLE DRAPES</p>
       </div>
-      <ul className="nav-menu">
+
+      <img className="nav-dropdown" onClick={dropdwon_toggle} src={nav_dropdown} alt="" />
+      <ul ref={menuRef} className="nav-menu">
         <li>
           <NavLink
             to="/"
             style={({ isActive }) => ({
               textDecoration: "none",
-              color: isActive ? "black" : "gray", // Active link color
+              color: isActive ? "black" : "gray", 
             })}
           >
             Shop
